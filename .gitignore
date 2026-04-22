@@ -1,0 +1,17 @@
+# env
+ispi/
+venv/
+.env
+
+# python
+__pycache__/
+*.pyc
+
+# database
+db.sqlite3
+
+# vector db
+chroma_db/
+
+# secrets
+key.txt
