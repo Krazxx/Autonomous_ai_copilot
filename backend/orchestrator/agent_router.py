@@ -2,13 +2,13 @@ from agents.chat_agent import ChatAgent
 from agents.rag_agent import RAGAgent
 from agents.decision_agent import DecisionAgent
 from agents.automation_agent import AutomationAgent   
-from agents.browser_agent import BrowserAgent
+
 
 class AgentRouter:
 
     def __init__(self):
         self.chat = ChatAgent()
-        self.browser = BrowserAgent()
+        #self.browser = BrowserAgent()
         self.rag = RAGAgent()
         self.decision = DecisionAgent()
         self.automation = AutomationAgent()   
@@ -26,6 +26,6 @@ class AgentRouter:
             return self.automation.respond(message)   
         
         if agent_type == "browser":
-            return self.browser.respond(message)
+            return "⚠️ Browser automation not supported in deployed version"
 
         return self.chat.respond(message)
