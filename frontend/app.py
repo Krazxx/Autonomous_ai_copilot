@@ -79,7 +79,7 @@ if submit and prompt:
     try:
         
         res = requests.post(
-            "http://127.0.0.1:8000/api/copilot",
+            "https://autonomousaicopilot-production.up.railway.app/api/chat",
             json={"message": prompt},
             timeout=30
         )
@@ -117,7 +117,7 @@ if uploaded_file and not st.session_state.pdf_uploaded:
     if text:
         try:
             requests.post(
-                "http://127.0.0.1:8000/api/upload",
+                "https://autonomousaicopilot-production.up.railway.app/api/upload",
                 json={"text": text},
                 timeout=60
             )
