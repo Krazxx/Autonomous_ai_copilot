@@ -4,16 +4,14 @@ class DecisionAgent:
 
         msg = message.lower()
 
-        if "pdf" in msg or "document" in msg:
-            return "rag"
-
-        if "email" in msg:
+        # ✅ automation triggers
+        if "play" in msg or "song" in msg or "music" in msg:
             return "automation"
 
-        if "open" in msg or "search" in msg:
+        if "search" in msg or "google" in msg:
             return "browser"
-        
-        if "play" in message.lower() or "song" in message.lower():
-            return "music"
+
+        if "pdf" in msg or "document" in msg or "summarize" in msg:
+            return "rag"
 
         return "chat"
