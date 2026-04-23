@@ -85,7 +85,11 @@ if submit and prompt:
         )
 
         data = res.json()
-        response = data.get("response", "No response")
+        response = data.get("response")
+
+        # 🎵 handle music response
+        if isinstance(response, dict) and response.get("type") == "music":
+            response = f"🎵 Play here: {response['url']}"
 
     except Exception as e:
         response = f"Error: {str(e)}"
@@ -125,3 +129,6 @@ if uploaded_file and not st.session_state.pdf_uploaded:
             st.success("PDF uploaded & processed ✅")
         except:
             st.error("Failed to upload PDF ❌")
+
+
+            

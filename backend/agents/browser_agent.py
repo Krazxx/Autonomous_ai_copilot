@@ -1,6 +1,7 @@
 import webbrowser
 import pywhatkit
 
+
 class BrowserAgent:
 
     def respond(self, message: str):

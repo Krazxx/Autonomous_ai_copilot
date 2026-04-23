@@ -12,5 +12,8 @@ class DecisionAgent:
 
         if "open" in msg or "search" in msg:
             return "browser"
+        
+        if "play" in message.lower() or "song" in message.lower():
+            return "music"
 
         return "chat"
