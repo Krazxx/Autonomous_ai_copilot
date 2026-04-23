@@ -39,5 +39,7 @@ class AgentRouter:
 
         if agent_type == "browser":
             return "⚠️ Browser automation not supported in deployed version"
+        print("ROUTED TO:", agent_type)
 
         return self.chat.respond(message)
+       
