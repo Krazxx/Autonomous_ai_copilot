@@ -6,3 +6,4 @@ groq
 chromadb
 pypdf
 python-dotenv
+django-cors-headers
